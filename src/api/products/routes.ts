@@ -1,13 +1,13 @@
 import * as Hapi from "@hapi/hapi";
 import * as Validate from './requestValidations';
-import ProductController from './controller';
+import Controller from './controller';
 import Config from '@config/index';
 import Logger from '@utils/Logger';
 import IRoute from '@utils/types/route';
 
-const controller: ProductController = new ProductController();
+const controller: Controller = new Controller();
 const routePrefix = Config.app.routePrefix
-export default class AuthRoutes implements IRoute {
+export default class ProductRoutes implements IRoute {
   // Register promise array for routes promise array
   public async register(server: Hapi.Server): Promise<any> {
     return new Promise<void>(resolve => {
