@@ -11,9 +11,6 @@ const production = {
     routePrefix: "/api/v1"
   },
   db: {
-    host: process.env.DB_HOST || 'localhost',
-    port: process.env.DB_PORT || 27017,
-    name: process.env.DB_NAME || 'db',
     mongoUrl: process.env.MONGO_DB_URL || "mongodb://localhost:27017/ps-server-prod"
   }
 }
@@ -28,9 +25,6 @@ const development = {
     routePrefix: "/api/v1"
   },
   db: {
-    host: process.env.DB_HOST || 'localhost',
-    port: process.env.DB_PORT || 27017,
-    name: process.env.DB_NAME || 'db',
     mongoUrl: process.env.MONGO_DB_URL || "mongodb://localhost:27017/ps-server-dev"
   }
 }
@@ -45,9 +39,6 @@ const test = {
     routePrefix: "/api/v1"
   },
   db: {
-    host: process.env.DB_HOST || 'localhost',
-    port: process.env.DB_PORT || 27017,
-    name: process.env.DB_NAME || 'test',
     url: process.env.TEST_MONGODB_URL || "mongodb://localhost:27017/ps-server-test"
   }
 }
