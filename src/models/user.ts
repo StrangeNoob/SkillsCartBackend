@@ -15,7 +15,7 @@ export interface IUser extends Mongoose.Document {
 export const UserSchema = new Mongoose.Schema(
   {
     name: String,
-    email: Number,
+    email: String,
     firebaseUid: String,
     photoUrl: { type: String },
     role: {type: String},
