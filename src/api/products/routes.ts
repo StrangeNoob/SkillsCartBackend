@@ -19,7 +19,7 @@ export default class ProductRoutes implements IRoute {
           options: {
             handler: controller.create,
             validate: Validate.create,
-            description: 'Method that creates a new Guest user.',
+            description: 'Method that creates a Product.',
             tags: ['api', 'Product', 'Admin'],
             auth: false,
           },
@@ -30,7 +30,7 @@ export default class ProductRoutes implements IRoute {
           options: {
             handler: controller.update,
             validate: Validate.update,
-            description: 'Method that update a Guest user.',
+            description: 'Method that update a Product.',
             tags: ['api', 'Product', 'Admin'],
             auth: false,
           },
@@ -41,7 +41,7 @@ export default class ProductRoutes implements IRoute {
           options: {
             handler: controller.getAll,
             // validate: Validate.getAll,
-            description: 'Method that update a Guest user.',
+            description: 'Method that get All Products',
             tags: ['api', 'Product'],
             auth: false,
           },
@@ -52,7 +52,7 @@ export default class ProductRoutes implements IRoute {
             options: {
               handler: controller.get,
               validate: Validate.get,
-              description: 'Method that update a Guest user.',
+              description: 'Method that a Particular Product',
               tags: ['api', 'Product'],
               auth: false,
             },
