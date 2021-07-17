@@ -12,6 +12,10 @@
     "clean": "rm -rf build && mkdir build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": ">=14.17.2 <15",
+    "npm": "~6.14.13"
+  },
   "author": "StrangeNoob",
   "license": "ISC",
   "dependencies": {
