@@ -20,7 +20,7 @@ export default class AuthRoutes implements IRoute {
             options: {
               handler: controller.create,
               validate: Validate.create,
-              description: 'Method that creates a new Guest user.',
+              description: 'Method that creates Orders for user.',
               tags: ['api','User'],
               auth: false,
             },
@@ -31,7 +31,7 @@ export default class AuthRoutes implements IRoute {
             options: {
               handler: controller.getAll,
               validate: Validate.getAll,
-              description: 'Method that update a Guest user.',
+              description: 'Method that get All Orders of user.',
               tags: ['api', 'User'],
               auth: false,
             },
