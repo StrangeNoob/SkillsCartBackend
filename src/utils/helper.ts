@@ -2,6 +2,7 @@ import get from "lodash/get";
 import * as Jwt from "jsonwebtoken";
 import Wreck from "@hapi/wreck";
 import Config from "@config/index"
+import { IUser } from "@models/user";
 
 export interface DecodedUser {
   _id: string;
@@ -11,7 +12,7 @@ export interface DecodedUser {
   createdAt: Date,
 }
 //To generate new JWT token
-export const createJwtAuthToken = (user: any ) => {
+export const createJwtAuthToken = (user: IUser ) => {
   const contents = {
     _id: get(user, "_id", ""),
     name: get(user, "name", ""),

@@ -2,7 +2,7 @@ import 'module-alias/register';
 import * as Hapi from "@hapi/hapi";
 import "dotenv/config"
 import Config from "@config/index"
-import Router from "@api/routes"
+import Router from "./api/routes"
 import Plugin from "@utils/plugins"
 import Logger from "@utils/Logger"
 
