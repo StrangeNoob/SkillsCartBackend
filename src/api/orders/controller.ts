@@ -16,7 +16,7 @@ export default class UserController {
         const payload = <IOrder>request.payload
         payload.user = user._id
         const order: IOrder | null = await Order.create(payload)
-        const orderedUser: IUser| null = await User.findOneAndUpdate({_id: user._id}, {$set: {"orderHistory.$": order._id }},{new:true}) 
+        await User.updateOne({_id: user._id},{"$push":{ orderHistory: order._id} }) 
         return reply
           .response({
             status: true,
@@ -53,6 +53,7 @@ export default class UserController {
       let { user, error } = Helper.verifyToken(authToken);
       if (user && (user?.role === Roles.Admin || user?.role === Roles.User)) {
         const orderedUser: IUser| null = await User.findById({_id: user._id}).populate("orderHistory") 
+        console.log(orderedUser)
         return reply
           .response({
             status: true,

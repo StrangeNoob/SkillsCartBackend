@@ -19,7 +19,7 @@ export const OrderSchema = new Mongoose.Schema(
             type: Object,
             required: true,
         },
-        quanity:{
+        quantity:{
             type: Number,
             required: true,
         }

@@ -1,5 +1,5 @@
 import * as Mongoose from "mongoose";
-
+import { IOrder } from "./order";
 export interface IUser extends Mongoose.Document {
   _id: string | null | any;
   firebaseUid: string;
@@ -7,7 +7,7 @@ export interface IUser extends Mongoose.Document {
   email: string;
   photoUrl: string | null;
   role: string | null;
-  orderHistory: string[];
+  orderHistory: string[]| IOrder[];
   createdAt: Date | null;
   updateAt: Date | null;
 }

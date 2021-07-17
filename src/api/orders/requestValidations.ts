@@ -10,7 +10,7 @@ export const create: any = {
     products: Joi.array().items(Joi.object({
       product: Joi.object().required(),
       quantity: Joi.number().required()
-    })),   
+    }))
   }),
 };
 

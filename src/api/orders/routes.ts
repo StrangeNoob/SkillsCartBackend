@@ -12,11 +12,11 @@ export default class AuthRoutes implements IRoute {
     // Register promise array for routes promise array
     public async register(server: Hapi.Server): Promise<any> {
       return new Promise<void>(resolve => {
-        Logger.info('🛫  Register User Routes\n');
+        Logger.info('🛫  Register Order Routes\n');
         server.route([
           {
             method: 'POST',
-            path: `${routePrefix}/user`,
+            path: `${routePrefix}/orders`,
             options: {
               handler: controller.create,
               validate: Validate.create,
@@ -27,7 +27,7 @@ export default class AuthRoutes implements IRoute {
           },
           {
             method: 'GET',
-            path: `${routePrefix}/user/all`,
+            path: `${routePrefix}/orders`,
             options: {
               handler: controller.getAll,
               validate: Validate.getAll,
