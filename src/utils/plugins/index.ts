@@ -2,7 +2,7 @@ import * as Hapi from "@hapi/hapi";
 import Mongoose from "mongoose";
 import BlueBird from "bluebird";
 import Config from "./options";
-import Logger from "@utils/Logger";
+import Logger from "@utils/logger";
 
 export default class Plugins {
   // Define Swagger plugins

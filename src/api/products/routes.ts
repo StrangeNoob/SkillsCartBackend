@@ -2,7 +2,7 @@ import * as Hapi from "@hapi/hapi";
 import * as Validate from './requestValidations';
 import Controller from './controller';
 import Config from '@config/index';
-import Logger from '@utils/Logger';
+import Logger from '@utils/logger';
 import IRoute from '@utils/types/route';
 
 const controller: Controller = new Controller();

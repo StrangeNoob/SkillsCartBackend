@@ -4,7 +4,7 @@ import "dotenv/config"
 import Config from "@config/index"
 import Router from "./api/routes"
 import Plugin from "@utils/plugins"
-import Logger from "@utils/Logger"
+import Logger from "@utils/logger"
 
 
 // Catch unhandling unexpected exceptions
